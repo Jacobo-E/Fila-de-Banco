@@ -107,22 +107,37 @@ void Sacar_de_Cola(int fila){//Saca al primero de la fila N
     switch(fila){
         case 0:
             aux = inicioUno;
+            if(inicioUno == NULL){
+                return;
+            }
             inicioUno = inicioUno->atras;
             break;
         case 1:
             aux = inicioDos;
+            if(inicioDos == NULL){
+                return;
+            }
             inicioDos = inicioDos->atras;
             break;
         case 2:
             aux = inicioTres;
+            if(inicioTres == NULL){
+                return;
+            }
             inicioTres = inicioTres->atras;
             break;
         case 3:
             aux = inicioCuatro;
+            if(inicioCuatro == NULL){
+                return;
+            }
             inicioCuatro = inicioCuatro->atras;
             break;
         case 4:
             aux = inicioCinco;
+            if(inicioCinco == NULL){
+                return;
+            }
             inicioCinco = inicioCinco->atras;
             break;
         default:
@@ -131,6 +146,7 @@ void Sacar_de_Cola(int fila){//Saca al primero de la fila N
 
     free(aux);
 }
+
 
 int Decision(){
     int decisionAleat = TiempoAleatorio();
